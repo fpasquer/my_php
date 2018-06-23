@@ -1,0 +1,39 @@
+# Info bdd in the file ./.env
+
+web:
+    build: nginx
+    volumes:
+        - /var/http:/var/www/html
+    ports:
+        - 80:80
+    links:
+        - php:php
+
+php:
+    build: php
+    volumes:
+        - /var/http:/var/www/html
+    links:
+        - db:db
+
+phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    ports:
+        - 8080:80
+    links:
+        - db:db
+    environment:
+        - PMA_USER=${MYSQL_USER}
+        - PMA_PASSWORD=${MYSQL_PASS}
+
+db:
+    image: mysql:5.7
+    volumes:
+        - /var/lib/boot2docker/mysql:/var/lib/mysql
+    ports:
+        - "3306:3306"
+    environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=${MYSQL_DB}
+        - MYSQL_USER=${MYSQL_USER}
+        - MYSQL_PASSWORD=${MYSQL_PASS}
