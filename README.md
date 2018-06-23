@@ -21,8 +21,10 @@ docker php env
 	4 open a brother tape your ip
 
 ## info
-	To access at php your_ip:8080 in your brother
+	To access at phpmyadmin your_ip:8080 in your brother
+	db_Tblae	: database_dev
+	db_pass		: yonDTotHOMYkTqHA
+	db_user		: fpasquer
 
-## options:
-	In the file .env you can setup the config for your bdd
-
+## options
+	In the file .env you can setup the config for phpmyadmin
