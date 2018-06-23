@@ -22,7 +22,7 @@ docker php env
 
 ## info
 	To access at phpmyadmin your_ip:8080 in your brother
-	db_Tblae	: database_dev
+	db_table	: database_dev
 	db_pass		: yonDTotHOMYkTqHA
 	db_user		: fpasquer
 
