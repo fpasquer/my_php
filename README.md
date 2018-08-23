@@ -6,7 +6,7 @@ docker php env
 	2 connect to your virtual machine with SSH
 		3 sudo touch '/var/lib/boot2docker/bootlocal.sh'
 		4 sudo chmod +x '/var/lib/boot2docker/bootlocal.sh'
-		5 sudo vi '/var/lib/boot2docker/bootlocal.sh
+		5 sudo vi '/var/lib/boot2docker/bootlocal.sh'
 			mkdir /var/http
 			mount -t vboxsf http /var/http
 			echo 'cd /var/http' >> /home/docker/.ashrc
